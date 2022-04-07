@@ -41,7 +41,6 @@ noremap <silent> <leader>r :action Run<CR>
 noremap <silent> <leader>R :action RunClass<CR>
 noremap <silent> [b :action PreviousTab<CR>
 noremap <silent> ]b :action NextTab<CR>
-noremap <silent> <leader>g :action Gradle.ExecuteTask<CR>
 noremap <silent> <leader>ha :action HideAllWindows<CR>
 noremap <silent> <leader>at :action ActivateTerminalToolWindow<CR>
 """ --- insert mode ---
