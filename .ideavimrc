@@ -36,6 +36,7 @@ let mapleader=" "
 set easymotion
 
 """ ----------- Bind IDE Action ----------
+""" --- normal mode ---
 noremap <silent> <leader>r :action Run<CR>
 noremap <silent> <leader>R :action RunClass<CR>
 noremap <silent> [b :action PreviousTab<CR>
@@ -43,7 +44,10 @@ noremap <silent> ]b :action NextTab<CR>
 noremap <silent> <leader>g :action Gradle.ExecuteTask<CR>
 noremap <silent> <leader>ha :action HideAllWindows<CR>
 noremap <silent> <leader>at :action ActivateTerminalToolWindow<CR>
+""" --- insert mode ---
+inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>gi
 
 """ only for Android Studio
 noremap <silent> <leader>al :action ActivateLogcatToolWindow<CR>
 noremap <silent> <leader>ap :action ActivateProjectToolWindow<CR>
+noremap <silent> <leader>s :action Android.SyncProject<CR>
