@@ -1,0 +1,46 @@
+""" 设置当前行号
+set number
+set relativenumber
+""" 设置vim数字格式为10进制
+set nrformats=
+""" 回溯历史命令，避免使用光标按键
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+""" 映射缓冲遍历的快捷键bn,bp,bfirst,blast
+noremap <silent> [b :bprevious<CR>
+noremap <silent> ]b :bnext<CR>
+noremap <silent> [B :bfirst<CR>
+noremap <silent> ]B :blast<CR>
+
+""" 映射%%为%:h ，方便展开当前文件所在的目录
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+""" netrw插件
+set nocompatible
+filetype plugin on
+
+""" 增强%命令，如可匹配HTML的标签页，if/else跳转
+runtime macros/matchit.vim
+
+""" 增量查找
+set incsearch
+""" 查找结果高亮
+set hlsearch
+
+set scrolloff=5
+""" formatting
+map Q gq
+
+""" only english input allowed in normal mode
+set keep-english-in-normal
+
+
+""" ----------- Plugin ----------
+set surround
+let mapleader=" "
+set easymotion
+
+""" ----------- Bind IDE Action ----------
+noremap <silent> <leader>r :action Run<CR>
+noremap <silent> <leader>R :action RunClass<CR>
