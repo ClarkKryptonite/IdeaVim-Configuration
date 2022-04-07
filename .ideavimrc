@@ -7,12 +7,6 @@ set nrformats=
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
-""" 映射缓冲遍历的快捷键bn,bp,bfirst,blast
-noremap <silent> [b :bprevious<CR>
-noremap <silent> ]b :bnext<CR>
-noremap <silent> [B :bfirst<CR>
-noremap <silent> ]B :blast<CR>
-
 """ 映射%%为%:h ，方便展开当前文件所在的目录
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
@@ -44,3 +38,12 @@ set easymotion
 """ ----------- Bind IDE Action ----------
 noremap <silent> <leader>r :action Run<CR>
 noremap <silent> <leader>R :action RunClass<CR>
+noremap <silent> [b :action PreviousTab<CR>
+noremap <silent> ]b :action NextTab<CR>
+noremap <silent> <leader>g :action Gradle.ExecuteTask<CR>
+noremap <silent> <leader>ha :action HideAllWindows<CR>
+noremap <silent> <leader>at :action ActivateTerminalToolWindow<CR>
+
+""" only for Android Studio
+noremap <silent> <leader>al :action ActivateLogcatToolWindow<CR>
+noremap <silent> <leader>ap :action ActivateProjectToolWindow<CR>
