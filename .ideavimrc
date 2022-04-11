@@ -43,6 +43,9 @@ noremap <silent> [b :action PreviousTab<CR>
 noremap <silent> ]b :action NextTab<CR>
 noremap <silent> <leader>ha :action HideAllWindows<CR>
 noremap <silent> <leader>at :action ActivateTerminalToolWindow<CR>
+noremap <silent> <leader>ab :action ActivateBuildToolWindow<CR>
+noremap <silent> <leader>ct :action CloseActiveTab<CR>
+noremap <silent> <leader>ca :action CloseAllEditors<CR>
 """ --- insert mode ---
 inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>gi
 
