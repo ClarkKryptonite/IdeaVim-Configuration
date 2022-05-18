@@ -51,16 +51,17 @@ if has('ide')
     noremap <silent> <leader>at :action ActivateTerminalToolWindow<CR>
     noremap <silent> <leader>ab :action ActivateBuildToolWindow<CR>
     noremap <silent> <leader>a0 :action ActivateCommitToolWindow<CR>
+    noremap <silent> <leader>ad :action ActivateDebugToolWindow<CR>
     """ close editors related
     noremap <silent> <leader>ct :action CloseActiveTab<CR>
     noremap <silent> <leader>cu :action CloseAllUnmodifiedEditors<CR>
     noremap <silent> <leader>ca :action CloseAllEditors<CR>
+    noremap <silent> <leader>co :action CloseAllEditorsButActive<CR>
 
     """ --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>gi
 
     if &ide =~? 'android studio'
-        noremap <silent> <leader>ad :action ActivateDebugToolWindow<CR>
         noremap <silent> <leader>al :action ActivateLogcatToolWindow<CR>
         noremap <silent> <leader>s :action Android.SyncProject<CR>
     else
