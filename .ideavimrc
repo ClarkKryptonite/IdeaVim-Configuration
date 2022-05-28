@@ -52,6 +52,7 @@ if has('ide')
     noremap <silent> <leader>ab :action ActivateBuildToolWindow<CR>
     noremap <silent> <leader>a0 :action ActivateCommitToolWindow<CR>
     noremap <silent> <leader>ad :action ActivateDebugToolWindow<CR>
+    noremap <silent> <leader>as :action ActivateStructureToolWindow<CR>
     noremap <silent> <leader>af :action SelectInProjectView<CR>
     """ close editors related
     noremap <silent> <leader>ct :action CloseActiveTab<CR>
