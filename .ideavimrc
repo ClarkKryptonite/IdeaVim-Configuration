@@ -29,6 +29,9 @@ map Q gq
 """ only english input allowed in normal mode
 set keep-english-in-normal
 
+""" clip to unnamed register
+set clipboard+=unnamed
+
 
 """ ----------- Plugin ----------
 set surround
