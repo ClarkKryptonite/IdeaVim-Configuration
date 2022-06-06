@@ -26,9 +26,6 @@ set scrolloff=5
 """ formatting
 map Q gq
 
-""" clip to unnamed register
-set clipboard+=unnamed
-
 """ ----------- Plugin ----------
 set surround
 let mapleader=" "
