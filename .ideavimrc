@@ -60,6 +60,8 @@ if has('ide')
     noremap <silent> <leader>co :action CloseAllEditorsButActive<CR>
     """ toggle
     noremap <silent> <leader>td :action ToggleRenderedDocPresentation<CR>
+    """ format code
+    noremap <silent> <leader>lf :action ReformatCode<CR>
 
     """ --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>gi
