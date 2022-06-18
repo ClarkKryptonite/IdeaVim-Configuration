@@ -61,10 +61,11 @@ if has('ide')
     """ toggle
     noremap <silent> <leader>td :action ToggleRenderedDocPresentation<CR>
     """ format code
-    noremap <silent> <leader>lf :action ReformatCode<CR>
+    noremap <silent> <leader>rc :action ReformatCode<CR>
+    noremap <silent> <leader>re :action RenameElement<CR>
 
     """ --- insert mode ---
-    inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>gi
+    inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
 
     if &ide =~? 'android studio'
         noremap <silent> <leader>al :action ActivateLogcatToolWindow<CR>
