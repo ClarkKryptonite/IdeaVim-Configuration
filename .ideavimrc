@@ -61,8 +61,8 @@ if has('ide')
     """ toggle
     noremap <silent> <leader>td :action ToggleRenderedDocPresentation<CR>
     """ format code
-    noremap <silent> <leader>rc :action ReformatCode<CR>
-    noremap <silent> <leader>re :action RenameElement<CR>
+    noremap <silent> <leader>lf :action ReformatCode<CR>
+    noremap <silent> <leader>lr :action RenameElement<CR>
 
     """ --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
