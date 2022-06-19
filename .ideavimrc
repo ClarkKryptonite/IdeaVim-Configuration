@@ -39,8 +39,8 @@ if has('ide')
     """ ----------- Bind IDE Action ----------
 
     """ --- normal mode ---
-    noremap <silent> <leader>r :action Run<CR>
-    noremap <silent> <leader>R :action RunClass<CR>
+    noremap <silent> <leader>rr :action Run<CR>
+    noremap <silent> <leader>rR :action RunClass<CR>
     noremap <silent> [w :action CloseContent<CR>
     noremap <silent> [b :action PreviousTab<CR>
     noremap <silent> ]b :action NextTab<CR>
@@ -61,8 +61,8 @@ if has('ide')
     """ toggle
     noremap <silent> <leader>td :action ToggleRenderedDocPresentation<CR>
     """ format code
-    noremap <silent> <leader>lf :action ReformatCode<CR>
-    noremap <silent> <leader>lr :action RenameElement<CR>
+    noremap <silent> <leader>rc :action ReformatCode<CR>
+    noremap <silent> <leader>re :action RenameElement<CR>
 
     """ --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
