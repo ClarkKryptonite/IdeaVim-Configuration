@@ -1,34 +1,34 @@
-""" 设置当前行号
+" 设置当前行号
 set number
 set relativenumber
-""" 设置vim数字格式为10进制
+" 设置vim数字格式为10进制
 set nrformats=
-""" 回溯历史命令，避免使用光标按键
+" 回溯历史命令，避免使用光标按键
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
-""" 映射%%为%:h ，方便展开当前文件所在的目录
+" 映射%%为%:h ，方便展开当前文件所在的目录
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-""" netrw插件
+" netrw插件
 set nocompatible
 filetype plugin on
 
-""" 增强%命令，如可匹配HTML的标签页，if/else跳转
+" 增强%命令，如可匹配HTML的标签页，if/else跳转
 runtime macros/matchit.vim
 
-""" 增量查找
+" 增量查找
 set incsearch
-""" 查找结果高亮
+" 查找结果高亮
 set hlsearch
 
 set scrolloff=5
-""" formatting
+" formatting
 map Q gq
 
 set clipboard-=unnamed
 
-""" ----------- Plugin ----------
+" ----------- Plugin ----------
 set surround
 let mapleader=" "
 set easymotion
@@ -36,15 +36,15 @@ set commentary
 
 if has('ide')
 
-    """ ----------- Bind IDE Action ----------
+    " ----------- Bind IDE Action ----------
 
-    """ --- normal mode ---
+    " --- normal mode ---
     noremap <silent> <leader>rr :action Run<CR>
     noremap <silent> <leader>rR :action RunClass<CR>
     noremap <silent> [w :action CloseContent<CR>
     noremap <silent> [b :action PreviousTab<CR>
     noremap <silent> ]b :action NextTab<CR>
-    """ active tool window related
+    " active tool window related
     noremap <silent> <leader>ha :action HideAllWindows<CR>
     noremap <silent> <leader>ap :action ActivateProjectToolWindow<CR>
     noremap <silent> <leader>at :action ActivateTerminalToolWindow<CR>
@@ -54,18 +54,18 @@ if has('ide')
     noremap <silent> <leader>as :action ActivateStructureToolWindow<CR>
     noremap <silent> <leader>af :action SelectInProjectView<CR>
     noremap <silent> <leader>ag :action ActivateVersionControlToolWindow<CR>
-    """ close editors related
+    " close editors related
     noremap <silent> <leader>ct :action CloseActiveTab<CR>
     noremap <silent> <leader>cu :action CloseAllUnmodifiedEditors<CR>
     noremap <silent> <leader>ca :action CloseAllEditors<CR>
     noremap <silent> <leader>co :action CloseAllEditorsButActive<CR>
-    """ toggle
+    " toggle
     noremap <silent> <leader>td :action ToggleRenderedDocPresentation<CR>
-    """ format code
+    " format code
     noremap <silent> <leader>rc :action ReformatCode<CR>
     noremap <silent> <leader>re :action RenameElement<CR>
 
-    """ --- insert mode ---
+    " --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
 
     if &ide =~? 'android studio'
