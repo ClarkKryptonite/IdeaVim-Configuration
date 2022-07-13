@@ -59,6 +59,9 @@ if has('ide')
     noremap <silent> <leader>cu :action CloseAllUnmodifiedEditors<CR>
     noremap <silent> <leader>ca :action CloseAllEditors<CR>
     noremap <silent> <leader>co :action CloseAllEditorsButActive<CR>
+    " goto error code
+    noremap <silent> <leader>cn :action GotoNextError<CR>
+    noremap <silent> <leader>cp :action GotoPreviousError<CR>
     " toggle
     noremap <silent> <leader>td :action ToggleRenderedDocPresentation<CR>
     " format code
