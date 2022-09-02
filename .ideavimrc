@@ -54,6 +54,11 @@ if has('ide')
     noremap <silent> <leader>as :action ActivateStructureToolWindow<CR>
     noremap <silent> <leader>af :action SelectInProjectView<CR>
     noremap <silent> <leader>ag :action ActivateVersionControlToolWindow<CR>
+    " active popup window
+    noremap <silent> <leader>pi :action QuickImplementations<CR>
+    noremap <silent> <leader>pf :action FileStructurePopup<CR>
+    noremap <silent> <leader>fg :action FindInPath<CR>
+    noremap <silent> <leader>ff :action SearchEverywhere<CR>
     " close editors related
     noremap <silent> <leader>ct :action CloseActiveTab<CR>
     noremap <silent> <leader>cu :action CloseAllUnmodifiedEditors<CR>
