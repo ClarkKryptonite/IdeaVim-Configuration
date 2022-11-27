@@ -74,6 +74,8 @@ if has('ide')
     noremap <silent> <leader>rc :action ReformatCode<CR>
     noremap <silent> <leader>rf :action RenameFile<CR>
     noremap <silent> <leader>re :action RenameElement<CR>
+    " new file
+    noremap <silent> <leader>nk :action Kotlin.NewFile<CR>
 
     " --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
