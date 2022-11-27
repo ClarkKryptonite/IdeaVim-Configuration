@@ -29,6 +29,7 @@ map Q gq
 set clipboard-=unnamed
 
 " ----------- Plugin ----------
+set NERDTree
 set surround
 let mapleader=" "
 set easymotion
