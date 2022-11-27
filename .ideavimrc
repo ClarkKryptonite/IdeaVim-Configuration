@@ -46,6 +46,7 @@ if has('ide')
     noremap <silent> [b :action PreviousTab<CR>
     noremap <silent> ]b :action NextTab<CR>
     noremap <silent> gi :action GotoImplementation<CR>
+    noremap <silent> <leader>hh :noh<CR>
     " active tool window related
     noremap <silent> <leader>ha :action HideAllWindows<CR>
     noremap <silent> <leader>ap :action ActivateProjectToolWindow<CR>
