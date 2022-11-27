@@ -78,15 +78,18 @@ if has('ide')
     noremap <silent> <leader>re :action RenameElement<CR>
     " new file
     noremap <silent> <leader>nk :action Kotlin.NewFile<CR>
+    " split window
+    noremap <silent> <leader>sv :action SplitVertically<CR>
+    noremap <silent> <leader>sh :action SplitHorizontally<CR>
 
     " --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
 
     if &ide =~? 'android studio'
         noremap <silent> <leader>al :action ActivateLogcatToolWindow<CR>
-        noremap <silent> <leader>s :action Android.SyncProject<CR>
+        noremap <silent> <leader>ss :action Android.SyncProject<CR>
     else
-        noremap <silent> <leader>s :action ExternalSystem.ProjectRefreshAction<CR>
+        noremap <silent> <leader>ss :action ExternalSystem.ProjectRefreshAction<CR>
     endif
 
 endif
