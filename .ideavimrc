@@ -80,7 +80,10 @@ if has('ide')
     noremap <silent> <leader>nk :action Kotlin.NewFile<CR>
     " split window
     noremap <silent> <leader>sv :action SplitVertically<CR>
+    noremap <silent> <leader>sr :action MoveTabRight<CR>
     noremap <silent> <leader>sh :action SplitHorizontally<CR>
+    noremap <silent> <leader>sd :action MoveTabDown<CR>
+    noremap <silent> <leader>so :action MoveEditorToOppositeTabGroup<CR>
 
     " --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
