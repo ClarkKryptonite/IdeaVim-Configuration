@@ -66,8 +66,9 @@ if has('ide')
     " close editors related
     noremap <silent> <leader>ct :action CloseActiveTab<CR>
     noremap <silent> <leader>cu :action CloseAllUnmodifiedEditors<CR>
-    noremap <silent> <leader>ca :action CloseAllEditors<CR>
     noremap <silent> <leader>co :action CloseAllEditorsButActive<CR>
+    " code action
+    noremap <silent> <leader>ca :action ShowIntentionActions<CR>
     " goto error code
     noremap <silent> <leader>cn :action GotoNextError<CR>
     noremap <silent> <leader>cp :action GotoPreviousError<CR>
