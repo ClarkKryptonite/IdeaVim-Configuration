@@ -34,6 +34,8 @@ set surround
 let mapleader=" "
 set easymotion
 set commentary
+set idearefactormode=keep
+set ideajoin
 
 if has('ide')
 
@@ -91,6 +93,10 @@ if has('ide')
 
     " --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
+    nnoremap <silent> <C-j> :m +1<CR>
+    nnoremap <silent> <C-k> :m -2<CR>
+    inoremap <silent> <C-j> <esc>:m +1<CR>gi
+    inoremap <silent> <C-k> <esc>:m -2<CR>gi
 
     if &ide =~? 'android studio'
         noremap <silent> <leader>al :action ActivateLogcatToolWindow<CR>
