@@ -81,7 +81,8 @@ if has('ide')
     " format code
     noremap <silent> <leader>rc :action ReformatCode<CR>
     noremap <silent> <leader>rf :action RenameFile<CR>
-    noremap <silent> <leader>re :action RenameElement<CR>ciw
+    noremap <silent> <leader>re :action RenameElement<CR>
+    noremap <silent> <leader>rE :action RenameElement<CR>ciw
     " new file
     noremap <silent> <leader>nk :action Kotlin.NewFile<CR>
     " split window
