@@ -72,7 +72,9 @@ if has('ide')
     " code action
     noremap <silent> <leader>ca :action ShowIntentionActions<CR>
     noremap <silent> <leader>cw :action SurroundWith<CR>
+    voremap <silent> <leader>cw :action SurroundWith<CR>
     noremap <silent> <leader>cc :action Unwrap<CR>
+    voremap <silent> <leader>cc :action Unwrap<CR>
     " goto error code
     noremap <silent> <leader>cn :action GotoNextError<CR>
     noremap <silent> <leader>cp :action GotoPreviousError<CR>
