@@ -44,6 +44,8 @@ if has('ide')
     " --- normal mode ---
     noremap <silent> <leader>rr :action Run<CR>
     noremap <silent> <leader>rR :action RunClass<CR>
+    noremap <silent> <leader>rD :action DebugClass<CR>
+    noremap <silent> <leader>sp :action ToggleLineBreakpoint<CR>
     noremap <silent> <leader>rl :action Flutter.Toolbar.ReloadAction<CR>
     noremap <silent> [w :action CloseContent<CR>
     noremap <silent> [b :action PreviousTab<CR>
