@@ -109,7 +109,7 @@ if has('ide')
         noremap <silent> <leader>al :action ActivateLogcatToolWindow<CR>
         noremap <silent> <leader>ss :action Android.SyncProject<CR>
     else
-        noremap <silent> <leader>ss :action ExternalSystem.ProjectRefreshAction<CR>
+        noremap <silent> <leader>ss :action ExternalSystem.RefreshAllProjects<CR>
     endif
 
 endif
