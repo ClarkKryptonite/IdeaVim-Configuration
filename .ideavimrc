@@ -32,7 +32,6 @@ set clipboard-=unnamed
 set NERDTree
 set surround
 let mapleader=" "
-set easymotion
 set commentary
 set idearefactormode=keep
 set ideajoin
@@ -41,6 +40,11 @@ if has('ide')
 
     " ----------- Bind IDE Action ----------
 
+    " --- AceJump ---
+    noremap <silent> <leader><leader>f :action AceAction<CR>
+    voremap <silent> <leader><leader>f :action AceAction<CR>
+    noremap <silent> <leader><leader>F :action AceTargetAction<CR>
+    voremap <silent> <leader><leader>F :action AceTargetAction<CR>
     " --- normal mode ---
     noremap <silent> <leader>rr :action Run<CR>
     noremap <silent> <leader>rR :action RunClass<CR>
@@ -77,6 +81,8 @@ if has('ide')
     voremap <silent> <leader>cw :action SurroundWith<CR>
     noremap <silent> <leader>cc :action Unwrap<CR>
     voremap <silent> <leader>cc :action Unwrap<CR>
+    noremap <silent> <leader>cd :action FindUsages<CR>
+    voremap <silent> <leader>cd :action FindUsages<CR>
     " goto error code
     noremap <silent> <leader>cn :action GotoNextError<CR>
     noremap <silent> <leader>cp :action GotoPreviousError<CR>
@@ -98,6 +104,9 @@ if has('ide')
     noremap <silent> <leader>mo :action MoveEditorToOppositeTabGroup<CR>
     " copy special mode
     noremap <silent> <leader>yiw :action CopyReference<CR>
+    " rewrite vim map
+    noremap <silent> <C-o> :action Back<CR>
+    noremap <silent> <C-i> :action Forward<CR>
 
     " --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
