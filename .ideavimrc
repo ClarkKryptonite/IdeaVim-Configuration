@@ -42,9 +42,7 @@ if has('ide')
 
     " --- AceJump ---
     noremap <silent> <leader><leader>f :action AceAction<CR>
-    voremap <silent> <leader><leader>f :action AceAction<CR>
     noremap <silent> <leader><leader>F :action AceTargetAction<CR>
-    voremap <silent> <leader><leader>F :action AceTargetAction<CR>
     " --- normal mode ---
     noremap <silent> <leader>rr :action Run<CR>
     noremap <silent> <leader>rR :action RunClass<CR>
@@ -65,6 +63,7 @@ if has('ide')
     noremap <silent> <leader>as :action ActivateStructureToolWindow<CR>
     noremap <silent> <leader>af :action SelectInProjectView<CR>
     noremap <silent> <leader>ag :action ActivateVersionControlToolWindow<CR>
+    noremap <silent> <leader>al :action ActivateLogcatToolWindow<CR>
     " active popup window
     noremap <silent> <leader>pi :action QuickImplementations<CR>
     noremap <silent> <leader>pf :action FileStructurePopup<CR>
@@ -75,14 +74,14 @@ if has('ide')
     noremap <silent> <leader>ct :action CloseActiveTab<CR>
     noremap <silent> <leader>cu :action CloseAllUnmodifiedEditors<CR>
     noremap <silent> <leader>co :action CloseAllEditorsButActive<CR>
+    noremap <silent> <leader>cr :action CloseAllReadonly<CR>
     " code action
     noremap <silent> <leader>ca :action ShowIntentionActions<CR>
     noremap <silent> <leader>cw :action SurroundWith<CR>
-    voremap <silent> <leader>cw :action SurroundWith<CR>
     noremap <silent> <leader>cc :action Unwrap<CR>
-    voremap <silent> <leader>cc :action Unwrap<CR>
     noremap <silent> <leader>cd :action FindUsages<CR>
-    voremap <silent> <leader>cd :action FindUsages<CR>
+    noremap <silent> <leader>ch :action QuickJavaDoc<CR>
+    " voremap <silent> <leader>ch :action QuickJavaDoc<CR>
     " goto error code
     noremap <silent> <leader>cn :action GotoNextError<CR>
     noremap <silent> <leader>cp :action GotoPreviousError<CR>
@@ -97,16 +96,17 @@ if has('ide')
     " new file
     noremap <silent> <leader>nk :action Kotlin.NewFile<CR>
     " split window
-    noremap <silent> <leader>sv :action SplitVertically<CR>
     noremap <silent> <leader>mr :action MoveTabRight<CR>
-    noremap <silent> <leader>sh :action SplitHorizontally<CR>
     noremap <silent> <leader>md :action MoveTabDown<CR>
     noremap <silent> <leader>mo :action MoveEditorToOppositeTabGroup<CR>
+    noremap <silent> <leader>sc :action ChangeSplitOrientation<CR>
+    " resize window
+    noremap <silent> <C-w>h :action StretchSplitToLeft<CR>
+    noremap <silent> <C-w>k :action StretchSplitToTop<CR>
+    noremap <silent> <C-w>l :action StretchSplitToRight<CR>
+    noremap <silent> <C-w>j :action StretchSplitToBottom<CR>
     " copy special mode
     noremap <silent> <leader>yiw :action CopyReference<CR>
-    " rewrite vim map
-    noremap <silent> <C-o> :action Back<CR>
-    noremap <silent> <C-i> :action Forward<CR>
 
     " --- insert mode ---
     inoremap <silent> <C-i> <esc>:action ImplementMethods<CR>
@@ -116,7 +116,6 @@ if has('ide')
     inoremap <silent> <C-k> <esc>:m -2<CR>gi
 
     if &ide =~? 'android studio'
-        noremap <silent> <leader>al :action ActivateLogcatToolWindow<CR>
         noremap <silent> <leader>ss :action Android.SyncProject<CR>
     else
         noremap <silent> <leader>ss :action ExternalSystem.RefreshAllProjects<CR>
